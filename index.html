@@ -1,214 +1,305 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>QA Automation Engineer Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA Automation Engineer Portfolio</title>
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
 
-body {
-    background: #0f172a;
-    color: #e2e8f0;
-    transition: 0.3s;
-}
+        body {
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+            transition: 0.3s;
+        }
 
-/* LIGHT MODE */
-body.light {
-    background: #f1f5f9;
-    color: #0f172a;
-}
+        /* LIGHT MODE */
+        body.light {
+            background: #f1f5f9;
+            color: #0f172a;
+        }
 
-header {
-    position: sticky;
-    top: 0;
-    padding: 15px 40px;
-    background: rgba(2,6,23,0.9);
-    display: flex;
-    justify-content: space-between;
-    z-index: 1000;
-}
+        header {
+            padding: 20px 50px;
+            background: #020617;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-body.light header {
-    background: #ffffff;
-}
+        body.light header {
+            background: #ffffff;
+        }
 
-nav a {
-    margin: 0 10px;
-    color: #38bdf8;
-    text-decoration: none;
-}
+        header h1 {
+            color: #38bdf8;
+        }
 
-.toggle-btn {
-    cursor: pointer;
-    padding: 5px 10px;
-    background: #38bdf8;
-    border-radius: 5px;
-    color: black;
-}
+        nav a {
+            margin: 0 15px;
+            color: #cbd5f5;
+            text-decoration: none;
+        }
 
-/* HERO */
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-}
+        nav a:hover {
+            color: #38bdf8;
+        }
 
-.hero h2 {
-    font-size: 48px;
-    color: #38bdf8;
-}
+        /* TOGGLE BUTTON */
+        .toggle-btn {
+            cursor: pointer;
+            padding: 6px 12px;
+            background: #38bdf8;
+            border-radius: 5px;
+            color: black;
+        }
 
-.typing {
-    color: #94a3b8;
-    margin-top: 10px;
-    font-size: 20px;
-}
+        section {
+            padding: 60px 80px;
+        }
 
-.btn {
-    margin-top: 20px;
-    display: inline-block;
-    padding: 10px 20px;
-    background: #38bdf8;
-    color: black;
-    border-radius: 5px;
-    text-decoration: none;
-}
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+        }
 
-/* SECTIONS */
-section {
-    padding: 70px 50px;
-}
+        .hero h2 {
+            font-size: 40px;
+            color: #38bdf8;
+        }
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    gap: 20px;
-}
+        #typing {
+            margin-top: 10px;
+            color: #94a3b8;
+            font-size: 20px;
+        }
 
-.card {
-    background: #020617;
-    padding: 20px;
-    border-radius: 10px;
-    transition: 0.3s;
-}
+        .hero p {
+            margin-top: 20px;
+            max-width: 700px;
+            margin-inline: auto;
+        }
 
-body.light .card {
-    background: #ffffff;
-}
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #38bdf8;
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+        }
 
-.card:hover {
-    transform: scale(1.05);
-}
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
 
-/* DASHBOARD */
-.dashboard {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-}
+        .card {
+            background: #020617;
+            padding: 20px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
 
-.dashboard div {
-    font-size: 24px;
-}
+        body.light .card {
+            background: #ffffff;
+        }
 
-/* SCREENSHOTS */
-img {
-    width: 100%;
-    border-radius: 10px;
-}
+        .card:hover {
+            transform: translateY(-5px);
+            background: #1e293b;
+        }
 
-/* LINKS */
-a {
-    color: #38bdf8;
-}
+        h3 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
 
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-}
-</style>
+        ul {
+            padding-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #020617;
+        }
+
+        /* LINKS */
+        a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* FADE ANIMATION */
+        .fade {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 1s;
+        }
+
+        .fade.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-    <h2>QA Engineer</h2>
+    <h1>QA Engineer</h1>
     <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </nav>
-    <div class="toggle-btn" onclick="toggleMode()">Toggle Mode</div>
+    <div class="toggle-btn" onclick="toggleMode()">Mode</div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
+<section class="hero fade">
     <h2>QA Automation Engineer</h2>
-    <div class="typing" id="typing"></div>
+    <h3 id="typing"></h3>
+
+    <p>
+        Results-driven QA Automation Engineer with strong expertise in building scalable automation frameworks,
+        improving test efficiency, and ensuring high-quality product delivery.
+    </p>
+
+    <a href="#contact" class="btn">Contact Me</a>
     <a href="resume.pdf" class="btn" download>Download Resume</a>
 </section>
 
-<!-- DASHBOARD -->
-<section>
+<!-- QA DASHBOARD -->
+<section id="dashboard" class="fade">
     <h2>QA Dashboard</h2>
-    <div class="dashboard">
-        <div><b>200+</b><br>Test Cases</div>
-        <div><b>150+</b><br>Automated</div>
-        <div><b>80+</b><br>Defects</div>
-        <div><b>40%</b><br>Efficiency ↑</div>
+    <div class="cards">
+        <div class="card"><h3>200+</h3><p>Test Cases</p></div>
+        <div class="card"><h3>150+</h3><p>Automated</p></div>
+        <div class="card"><h3>80+</h3><p>Defects Found</p></div>
+        <div class="card"><h3>40%</h3><p>Efficiency Improved</p></div>
     </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects">
+<section id="about" class="fade">
+    <h2>About Me</h2>
+    <p>
+        I am a QA Automation Engineer specializing in Selenium with Java, API testing, and database validation.
+        I focus on building robust automation frameworks using industry best practices like Page Object Model,
+        data-driven testing, and CI/CD integration.
+        <br><br>
+        I bring a strong testing mindset, ensuring quality at every stage of development while working in Agile environments.
+    </p>
+</section>
+
+<section id="skills" class="fade">
+    <h2>Skills</h2>
+    <div class="cards">
+
+        <div class="card">
+            <h3>Automation Tools</h3>
+            <ul>
+                <li>Selenium WebDriver</li>
+                <li>Appium (Basic)</li>
+                <li>Postman</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Programming</h3>
+            <ul>
+                <li>Java</li>
+                <li>SQL (MySQL)</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Testing Types</h3>
+            <ul>
+                <li>Manual Testing</li>
+                <li>API Testing</li>
+                <li>Database Testing</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Frameworks & Tools</h3>
+            <ul>
+                <li>TestNG</li>
+                <li>Page Object Model</li>
+                <li>Extent Reports</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section id="projects" class="fade">
     <h2>Projects</h2>
 
     <div class="cards">
 
         <div class="card">
-            <h3>E-Jewelers Automation</h3>
-            <p>Selenium + Java + TestNG framework with POM, reporting & data-driven testing.</p>
-            <img src="https://via.placeholder.com/400x200" alt="project">
+            <h3>E-Jewelers Automation Framework</h3>
+            <ul>
+                <li>Automated login, search, cart, checkout</li>
+                <li>Selenium + Java + TestNG</li>
+                <li>Page Object Model</li>
+                <li>Data-driven testing</li>
+            </ul>
         </div>
 
         <div class="card">
             <h3>JALA Academy Testing</h3>
-            <p>Manual + Automation testing including forms, alerts, validations.</p>
-            <img src="https://via.placeholder.com/400x200" alt="project">
+            <ul>
+                <li>Manual testing & bug tracking</li>
+                <li>Automation of forms & alerts</li>
+                <li>Table validation</li>
+            </ul>
         </div>
 
         <div class="card">
-            <h3>API + DB Testing</h3>
-            <p>Postman API validation + MySQL backend verification.</p>
-            <img src="https://via.placeholder.com/400x200" alt="project">
+            <h3>API + Database Testing</h3>
+            <ul>
+                <li>Postman API testing</li>
+                <li>CRUD operations</li>
+                <li>MySQL validation</li>
+            </ul>
         </div>
 
     </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="fade">
     <h2>Contact</h2>
 
-    <p>Email:
+    <p>Email: 
         <a href="mailto:akhilkudikala477@gmail.com">
             akhilkudikala477@gmail.com
         </a>
     </p>
 
-    <p>LinkedIn:
+    <p>LinkedIn: 
         <a href="https://www.linkedin.com/in/akhil-kudikala/" target="_blank">
-            Open Profile
+            View Profile
         </a>
     </p>
 
-    <p>GitHub:
+    <p>GitHub: 
         <a href="https://github.com/akhilkudikala477/" target="_blank">
             View Projects
         </a>
@@ -217,12 +308,17 @@ footer {
 </section>
 
 <footer>
-    <p>© 2026 QA Automation Engineer</p>
+    <p>© 2026 QA Automation Engineer Portfolio</p>
 </footer>
 
 <script>
-/* TYPING EFFECT */
-const text = ["I build automation frameworks...", "I ensure product quality...", "I break applications smartly..."];
+// Typing Effect
+const text = [
+"Selenium | Java | API | MySQL | Agile",
+"I build automation frameworks",
+"I ensure product quality"
+];
+
 let i=0,j=0,current="",isDeleting=false;
 
 function type(){
@@ -238,10 +334,21 @@ function type(){
 }
 type();
 
-/* DARK LIGHT TOGGLE */
+// Dark Mode Toggle
 function toggleMode(){
     document.body.classList.toggle("light");
 }
+
+// Fade Animation
+const elements = document.querySelectorAll('.fade');
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+});
+elements.forEach(el => observer.observe(el));
 </script>
 
 </body>
